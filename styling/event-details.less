@@ -1,0 +1,41 @@
+@import "./colors";
+
+.event-details--container {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  .details-header {
+    flex: 0 1 24px;
+    display: flex;
+    flex-direction: row;
+    padding: 6px;
+    background: @primary;
+    color: @font-alt;
+
+    .title {
+      flex: 1 0;
+    }
+
+    i {
+      margin-left: 3px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .details-content {
+    padding: 1rem;
+    overflow: auto;
+    flex: 1 0;
+  }
+
+  .details-footer {
+    flex: 0 1;
+    padding: 1rem;
+    & > * {
+      margin-left: 1rem;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "essent-roadmap",
+  "version": "0.0.1",
+  "private": true,
+  "homepage": "https://ariagaming.github.io/essent-roadmap/",
+  "dependencies": {
+    "@material-ui/core": "^1.5.0",
+    "@material-ui/icons": "^2.0.2",
+    "concurrently": "^3.6.1",
+    "gh-pages": "^1.2.0",
+    "jss": "^9.8.7",
+    "less": "^3.8.1",
+    "less-watch-compiler": "^1.11.3",
+    "lodash": "^4.17.10",
+    "lowdb": "^1.0.0",
+    "material-ui-color-picker": "^2.1.1",
+    "nodemon": "^1.18.3",
+    "react": "^16.4.2",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-color": "^2.14.1",
+    "react-dom": "^16.4.2",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run start-client\" \"npm run start-server\"",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "start-client": "react-scripts start",
+    "start-server": "nodemon --watch server ./server/server.js",
+    "watch-less": "less-watch-compiler ./styling ./public main.less",
+    "deploy": "npm run build && rm -rf ./mode_modules/gh-pages/.config/ && gh-pages -d ./build"
+  }
+}
